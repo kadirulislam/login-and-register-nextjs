@@ -16,18 +16,32 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hr-lines {
+  position: relative;
+  /*  new lines  */
+  max-width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hr-lines:before {
+  content: " ";
+  display: block;
+  height: 1px;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: rgb(153, 153, 153);
+}
+
+.hr-lines:after {
+  content: " ";
+  display: block;
+  height: 1px;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: rgb(153, 153, 153);
 }
