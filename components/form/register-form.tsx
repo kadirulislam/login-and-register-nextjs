@@ -1,9 +1,8 @@
 import React from 'react'
 import Button from '../button/button'
 import FormInput from './input/input'
-import Link from 'next/link'
-import ActionLink from '../link/link'
 import { FaApple, FaFacebook, FaGoogle } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function RegisterForm() {
   return (
@@ -36,17 +35,20 @@ export default function RegisterForm() {
           />
         </div>
         <div className='form-action-area flex flex-col justify-center items-center gap-4'>
-          <Button className='bg-primary-color ='>Create an Account</Button>
+          <Button  type='button' className='bg-primary-color ='>Create an Account</Button>
        
           <span className='hr-lines text-black/70'>or</span>
           <div className='w-full'>
-            <ActionLink href={'#'}  ><FaGoogle fontSize={20} /> Continue with Google</ActionLink>
-            <ActionLink href={'#'}  ><FaFacebook   fontSize={20} /> Continue with Facebook</ActionLink>
-            <ActionLink href={'#'} ><FaApple  fontSize={20} /> Continue with Apple</ActionLink>
+            <Button type='link' link={'#'}  ><FaGoogle fontSize={20} /> Continue with Google</Button>
+            <Button type='link' link={'#'}  ><FaFacebook   fontSize={20} /> Continue with Facebook</Button>
+            <Button type='link' link={'#'} ><FaApple  fontSize={20} /> Continue with Apple</Button>
           </div>
-          <div className='flex gap-3 pt-2'>
+          <div className='flex flex-row pt-2 gap-x-2 '>
           <h4 className='text-md font-bold'>Already have an Account?</h4>
-            <Link href={'/login'} className='text-primary-color font-bold'  > Log In</Link>
+            <Link href={'/login'}
+              className='font-bold bg-white text-primary-color'>
+              Log In
+            </Link>
             </div>
         </div>
             

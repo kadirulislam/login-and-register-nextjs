@@ -2,8 +2,6 @@
 import React from 'react'
 import Button from '../button/button'
 import FormInput from './input/input'
-import Link from 'next/link'
-import ActionLink from '../link/link'
 
 export default function LoginForm() {
     return (
@@ -36,10 +34,10 @@ export default function LoginForm() {
                     />
                 </div>
                 <div className='form-action-area flex flex-col justify-center items-center gap-4'>
-                    <Button className='bg-primary-color ='>Log In</Button>
+                    <Button type='button' className='bg-primary-color ='>Log In</Button>
                     <h4 className='text-md font-bold'>Forget Password?</h4>
                     <span className='hr-lines text-black/70'>or</span>
-                    <ActionLink href={'/register'} >Create an Account</ActionLink>
+                    <Button type='link' link={'/register'} >Create an Account</Button>
                 </div>
             
             </form>
